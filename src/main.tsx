@@ -1,9 +1,12 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import ReactDOM from "react-dom/client";
 import App from './App.tsx'
+import WebApp from '@twa-dev/sdk'
 import './index.css'
 
-createRoot(document.getElementById('root')!).render(
+WebApp.ready();
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
   </StrictMode>,
